@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{5F23DB38-0E13-434B-88BE-93BC0F30B8ED}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CadDelphi.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CadDelphi">
+        <MSBuild Projects="CadDelphi.dproj"/>
+    </Target>
+    <Target Name="CadDelphi:Clean">
+        <MSBuild Projects="CadDelphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CadDelphi:Make">
+        <MSBuild Projects="CadDelphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CadDelphi"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CadDelphi:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CadDelphi:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
