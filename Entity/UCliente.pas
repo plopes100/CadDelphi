@@ -12,7 +12,6 @@ uses
       TEndereco = Class
 
          Private
-            FEndereco      : String;
             FCep           : String;
             FLogradouro    : String;
             FNumero        : String;
@@ -23,11 +22,10 @@ uses
             FPais          : String;
 
          Public
-            Property      Endereco      : String    Read FEndereco       Write FEndereco;
             Property      Cep           : String    Read FCep            Write FCep;
             Property      Logradouro    : String    Read FLogradouro     Write FLogradouro;
             Property      Numero        : String    Read FNumero         Write FNumero;
-            Property      Complemento   : String    Read FComplemento    Write FEndereco;
+            Property      Complemento   : String    Read FComplemento    Write FComplemento;
             Property      Bairro        : String    Read FBairro         Write FBairro;
             Property      Cidade        : String    Read FCidade         Write FCidade;
             Property      Estado        : String    Read FEstado         Write FEstado;

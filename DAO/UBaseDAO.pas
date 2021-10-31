@@ -33,13 +33,13 @@ Implementation
    Function   TBaseDAO.FindAll() : TList<IEntity>;
    Var
        Saida:  TList<IEntity>;
-       Ent:    IEntity;
+       Entity: IEntity;
    Begin
       Saida := Tlist<IEntity>.Create();
 
-      For Ent in FDB.Values Do
+      For Entity in FDB.Values Do
       Begin
-         Saida.Add(Ent);
+         Saida.Add(Entity);
       End;
       Result := Saida;
 

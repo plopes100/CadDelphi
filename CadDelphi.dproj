@@ -99,13 +99,17 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="UFmPrincipal.pas">
-            <Form>Form1</Form>
+            <Form>FmPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="Interfaces\DataComponente.pas"/>
         <DCCReference Include="Interfaces\Entity.pas"/>
-        <DCCReference Include="DAO\UClienteDAO.pas"/>
+        <DCCReference Include="DAO\UBaseDAO.pas"/>
         <DCCReference Include="Entity\UCliente.pas"/>
+        <DCCReference Include="DAO\UClienteDAO.pas"/>
+        <DCCReference Include="Controller\UClienteController.pas"/>
+        <DCCReference Include="Utils\UTstr.Pas"/>
+        <DCCReference Include="Utils\UUtil.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

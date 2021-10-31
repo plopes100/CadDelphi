@@ -2,7 +2,8 @@ unit Entity;
 
 interface
 
-
+Uses
+      RTTI;
 
    type
 
@@ -13,7 +14,7 @@ interface
 
           Function  getKey(): String;
           Function  getMensagem(ind: Integer): String;
-          Function  existeEntity(Param: String; value: TObject): Boolean;
+          Function  existeEntity(Param: String; Value: TValue): Boolean;
       End;
 
 
