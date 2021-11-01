@@ -110,6 +110,16 @@
         <DCCReference Include="Controller\UClienteController.pas"/>
         <DCCReference Include="Utils\UTstr.Pas"/>
         <DCCReference Include="Utils\UUtil.pas"/>
+        <DCCReference Include="Entity\UPais.pas"/>
+        <DCCReference Include="DAO\UPaisDAO.pas"/>
+        <DCCReference Include="Controller\UBaseController.pas"/>
+        <DCCReference Include="Controller\UPaisController.pas"/>
+        <DCCReference Include="Entity\UEstado.pas"/>
+        <DCCReference Include="DAO\UEstadoDAO.pas"/>
+        <DCCReference Include="Controller\UEstadoController.pas"/>
+        <DCCReference Include="Utils\UViaCep.pas"/>
+        <DCCReference Include="Utils\UViaCepDados.pas"/>
+        <DCCReference Include="Utils\UEmail.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

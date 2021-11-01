@@ -20,6 +20,7 @@ uses DataComponente, Entity, Generics.Collections, System.Classes,
             Function   Update(Entity : IEntity): IEntity;
             Procedure  Delete(Entity : IEntity);
             Function   FindByParam(Param: String; Value: TValue): TList<IEntity>;
+            Function   JaExisteEntidade(const Entity: IEntity):  Boolean;
       End;
 
 Implementation
@@ -44,6 +45,15 @@ Implementation
       Result := Saida;
 
    End;
+
+   Function   TBaseDAO.JaExisteEntidade(const Entity: IEntity): Boolean;
+   Begin
+      If (FDB.ContainsKey(Entity.getKey())) Then
+         Result := True
+      Else
+         Result := False;
+   End;
+
 
 
    Function   TBaseDAO.FindById(Entity: IEntity): IEntity;

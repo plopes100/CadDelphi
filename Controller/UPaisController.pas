@@ -1,14 +1,13 @@
-Unit UClienteController;
+Unit UPaisController;
 
 Interface
 
 Uses UBaseController;
 
    Type
-      TClienteController = Class(TBaseController)
+      TPaisController = Class(TBaseController)
       End;
 
 Implementation
 
 End.
-

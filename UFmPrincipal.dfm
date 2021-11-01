@@ -1,6 +1,7 @@
 object FmPrincipal: TFmPrincipal
   Left = 0
   Top = 0
+  ActiveControl = edtCpf
   Caption = 'FmPrincipal'
   ClientHeight = 504
   ClientWidth = 1018
@@ -197,56 +198,47 @@ object FmPrincipal: TFmPrincipal
     Height = 13
     Caption = 'Filtrar por:'
   end
-  object Button1: TButton
-    Left = 678
-    Top = 8
-    Width = 75
-    Height = 25
-    Caption = 'Button1'
-    TabOrder = 0
-    OnClick = Button1Click
-  end
   object edtCpf: TEdit
     Left = 92
     Top = 14
     Width = 121
     Height = 21
-    TabOrder = 1
+    TabOrder = 0
   end
   object edtNome: TEdit
     Left = 92
     Top = 42
     Width = 348
     Height = 21
-    TabOrder = 2
+    TabOrder = 1
   end
   object edtIdentidade: TEdit
     Left = 547
     Top = 42
     Width = 178
     Height = 21
-    TabOrder = 3
+    TabOrder = 2
   end
   object edtTelefone: TEdit
     Left = 92
     Top = 73
     Width = 190
     Height = 21
-    TabOrder = 4
+    TabOrder = 3
   end
   object edtEmail: TEdit
     Left = 547
     Top = 73
     Width = 463
     Height = 21
-    TabOrder = 5
+    TabOrder = 4
   end
   object edtCep: TEdit
     Left = 92
     Top = 126
     Width = 121
     Height = 21
-    TabOrder = 6
+    TabOrder = 5
   end
   object btnValidarCEP: TButton
     Left = 233
@@ -254,70 +246,72 @@ object FmPrincipal: TFmPrincipal
     Width = 75
     Height = 25
     Caption = 'Validar CEP'
-    TabOrder = 7
+    TabOrder = 6
+    OnClick = btnValidarCEPClick
   end
   object edtLogradouro: TEdit
     Left = 92
     Top = 162
     Width = 348
     Height = 21
-    TabOrder = 8
+    TabOrder = 7
   end
   object edtNumero: TEdit
     Left = 92
     Top = 193
     Width = 190
     Height = 21
-    TabOrder = 9
+    TabOrder = 8
   end
   object edtComplemento: TEdit
     Left = 547
     Top = 193
     Width = 463
     Height = 21
-    TabOrder = 10
+    TabOrder = 9
   end
-  object edtBairo: TEdit
+  object edtBairro: TEdit
     Left = 92
     Top = 224
     Width = 348
     Height = 21
-    TabOrder = 11
+    TabOrder = 10
   end
   object edtCidade: TEdit
     Left = 547
     Top = 224
     Width = 463
     Height = 21
-    TabOrder = 12
+    TabOrder = 11
   end
-  object cmbPais: TComboBox
+  object cmbPaises: TComboBox
     Left = 92
     Top = 260
     Width = 346
     Height = 21
-    TabOrder = 13
+    TabOrder = 12
+    OnSelect = cmbPaisesSelect
   end
-  object cmbEstado: TComboBox
+  object cmbEstados: TComboBox
     Left = 547
     Top = 258
     Width = 346
     Height = 21
-    TabOrder = 14
+    TabOrder = 13
   end
   object cmbFiltro: TComboBox
     Left = 232
     Top = 335
     Width = 188
     Height = 21
-    TabOrder = 15
+    TabOrder = 14
   end
   object edtFiltro: TEdit
     Left = 441
     Top = 335
     Width = 350
     Height = 21
-    TabOrder = 16
+    TabOrder = 15
   end
   object btnFiltrar: TButton
     Left = 812
@@ -325,7 +319,7 @@ object FmPrincipal: TFmPrincipal
     Width = 77
     Height = 25
     Caption = 'Filtrar'
-    TabOrder = 17
+    TabOrder = 16
   end
   object btnLimparFiltro: TButton
     Left = 893
@@ -333,7 +327,7 @@ object FmPrincipal: TFmPrincipal
     Width = 77
     Height = 25
     Caption = 'Limpar Filtro'
-    TabOrder = 18
+    TabOrder = 17
   end
   object btnNovo: TButton
     Left = 233
@@ -341,7 +335,8 @@ object FmPrincipal: TFmPrincipal
     Width = 75
     Height = 25
     Caption = 'Novo Cliente'
-    TabOrder = 19
+    TabOrder = 18
+    OnClick = btnNovoClick
   end
   object btnSalvar: TButton
     Left = 72
@@ -349,7 +344,8 @@ object FmPrincipal: TFmPrincipal
     Width = 75
     Height = 25
     Caption = 'Salvar'
-    TabOrder = 20
+    TabOrder = 19
+    OnClick = btnSalvarClick
   end
   object btnExcluir: TButton
     Left = 176
@@ -357,7 +353,8 @@ object FmPrincipal: TFmPrincipal
     Width = 75
     Height = 25
     Caption = 'Excluir'
-    TabOrder = 21
+    TabOrder = 20
+    OnClick = btnExcluirClick
   end
   object btnCancelar: TButton
     Left = 279
@@ -365,7 +362,8 @@ object FmPrincipal: TFmPrincipal
     Width = 75
     Height = 25
     Caption = 'Cancelar'
-    TabOrder = 22
+    TabOrder = 21
+    OnClick = btnCancelarClick
   end
   object btnSair: TButton
     Left = 899
@@ -373,14 +371,15 @@ object FmPrincipal: TFmPrincipal
     Width = 75
     Height = 25
     Caption = 'Sair'
-    TabOrder = 23
+    TabOrder = 22
+    OnClick = btnSairClick
   end
   object sgrClientes: TStringGrid
     Left = 18
     Top = 362
     Width = 992
     Height = 120
-    TabOrder = 24
+    TabOrder = 23
     OnClick = sgrClientesClick
     OnDrawCell = sgrClientesDrawCell
   end

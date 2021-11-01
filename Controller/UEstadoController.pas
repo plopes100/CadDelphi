@@ -1,14 +1,14 @@
-Unit UClienteController;
+Unit UEstadoController;
 
 Interface
 
 Uses UBaseController;
 
    Type
-      TClienteController = Class(TBaseController)
+      TEstadoController = Class(TBaseController)
       End;
+
 
 Implementation
 
 End.
-
